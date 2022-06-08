@@ -33,10 +33,18 @@ Following method of class can be used to extract data information such as adjace
 ```
 
 ### Forward propagation
-Following method can be used for 
+Following method can be used for forward propagation. There will be two output from this method: output after activation function and output from predictor function. Input paramter are following
+- **number_of_nodes:** total number of nodes in the graph
+- **adjacent_matrix:** Adjacency matrix from graph that shows connection of nodes
+- **features:** Feature vector of all nodes of graph
+```bash
 
+   temp,output_temp = model.forward_propagation(number_of_nodes,adjacent_matrix,features)  
+        
+```
 
-
+      loss = net.loss(temp,critical_temperature_)
+        net.backward_propagation(loss,critical_temperature_,upsilon)
 
 
 

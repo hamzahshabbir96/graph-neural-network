@@ -42,18 +42,30 @@ Following method can be used for forward propagation. There will be two output f
    temp,output_temp = model.forward_propagation(number_of_nodes,adjacent_matrix,features)  
         
 ```
+### Loss method
+Loss function can be calculated using method 'loss' of Class GraphNeuralSuperconductor. It reuires intermediate result from forward method.
 
-      loss = net.loss(temp,critical_temperature_)
-        net.backward_propagation(loss,critical_temperature_,upsilon)
+```bash
 
+   loss = net.loss(temp,critical_temperature_)
+        
+```
+      
+## To train model
+All the classes have been initialized in train.py. Input parameters can be given as argument using command line. Following arument needs to be passed and these arguments can be put inside train.py as default
 
+```bash
 
+   python train.py
+    --N number of features
+    --op optimizer(default SGD)
+    --lr learningrate
+    --iter number of iteration
+    --batchsize size
+    --ep epoch
+    --datadir directory of training dataset
+```
 
-- [@hamzahshabbir](https://www.github.com/octokatherine)
-
-## Authors
-
-- [@hamzahshabbir](https://www.github.com/octokatherine)
 
   
 ## Acknowledgements

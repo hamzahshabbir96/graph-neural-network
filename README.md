@@ -47,7 +47,7 @@ Loss function can be calculated using method 'loss' of Class GraphNeuralSupercon
 
 ```bash
 
-   loss = net.loss(temp,critical_temperature_)
+   loss = model.loss(temp,critical_temperature_)
         
 ```
       

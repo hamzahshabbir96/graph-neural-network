@@ -10,8 +10,35 @@ Despite of good performance of compositional model, one of the major limitations
 GraphNeuralSuperconductor is the main class that contains computation and weight initialization. This can be initialized by following command and requires number of features of nodes as input
 
 ```bash
-  model=GraphNeuralSuperconductor(N)
+
+        adj, number_of_nodes, critical_temperature_,features = trainset.nextbatch(batchsize)
+        s,_ = net.forward_propagation(number_of_nodes,adj,features)  
+        loss = net.loss(s,critical_temperature_)
+        net.backward_propagation(loss,critical_temperature_,upsilon)
 ```
+### Preprocess data
+Since we have dataset in the text format in specific format. To make it available for computation, a class has been built which requires path of dataset as input and output train and test dataset, that can further be used.
+```bash
+  from utils import preprocessdata
+  path="datasets/train"
+  trainset,testset = preprocessdata.Preprocess(path).get_data()
+```
+
+### Extraction of adjacent matrix, critical temperature, features and number of nodes
+Following method of class can be used to extract data information such as adjacent matrix, critical temperature, features and number of nodes
+```bash
+
+   adjacent_matrix, number_of_nodes, critical_temperature_,features = trainset.next_dataset(batchsize)
+        
+```
+
+### Forward propagation
+Following method can be used for 
+
+
+
+
+
 
 
 - [@hamzahshabbir](https://www.github.com/octokatherine)

@@ -3,7 +3,7 @@
 
 Despite of good performance of compositional model, one of the major limitations is lacked to conserving structural features. Since structure of crystal has significant impact on superconductivity, approach should be to consider structural features into account. Structure of a molecules naturally can be represented as a graph with elements being node and bonds between elements being edge or arc. In machine learning, mostly structural data are dominant where we have fixed input length. But in real life we might not have always structured data such as in case of superconductor. Although there are ways to convert unstructured data to structured data, a lot of information is lost, which might be crucial and have great impact on model. One of the promising approaches of training model along with structural feature is Graph neural networks.
 
-![Image](pictures/mainpic.jpg)
+![Image](pictures/mainpic.png)
 ## Authors
 
 - [@hamzahshabbir](https://www.github.com/octokatherine)

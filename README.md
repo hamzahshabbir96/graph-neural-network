@@ -11,10 +11,7 @@ GraphNeuralSuperconductor is the main class that contains computation and weight
 
 ```bash
 
-        adj, number_of_nodes, critical_temperature_,features = trainset.nextbatch(batchsize)
-        s,_ = net.forward_propagation(number_of_nodes,adj,features)  
-        loss = net.loss(s,critical_temperature_)
-        net.backward_propagation(loss,critical_temperature_,upsilon)
+     model=GraphNeuralSuperconductor(N)
 ```
 ### Preprocess data
 Since we have dataset in the text format in specific format. To make it available for computation, a class has been built which requires path of dataset as input and output train and test dataset, that can further be used.
